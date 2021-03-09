@@ -115,6 +115,20 @@ class include: hit rate, compulsory misses, conflict misses, and prefetches.
 See the [Project 1 Starter Code
 Overview](https://git.sr.ht/~sumner/aca-project1/#starter-code-overview).
 
+### Downloading the Source
+
+If you want to use git on this project, **please use a *private* repo**. Then,
+run the following commands to clone the starter code and set the `origin` to
+your repo:
+```
+git clone https://git.sr.ht/~sumner/aca-project2
+git remote set-url origin <your-private-repo-url>
+```
+
+Alternatively, if you don't want to use Git, you can download a TAR.GZ of the
+source from the following URL:
+http://git.sr.ht/~sumner/aca-project2/archive/master.tar.gz
+
 ## Full Requirements
 
 As with the starter code for [Project
