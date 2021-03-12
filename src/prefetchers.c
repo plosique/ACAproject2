@@ -48,7 +48,7 @@ struct prefetcher *sequential_prefetcher_new(uint32_t prefetch_amount)
     sequential_prefetcher->cleanup = &sequential_cleanup;
 
     // TODO allocate any additional memory needed to store metadata here and
-    // assign to adjacent_prefetcher->data.
+    // assign to sequential_prefetcher->data.
 
     return sequential_prefetcher;
 }
@@ -97,7 +97,7 @@ uint32_t custom_handle_mem_access(struct prefetcher *prefetcher, struct cache_sy
 void custom_cleanup(struct prefetcher *prefetcher)
 {
     // TODO cleanup any additional memory that you allocated in the
-    // adjacent_prefetcher_new function.
+    // custom_prefetcher_new function.
 }
 
 struct prefetcher *custom_prefetcher_new()
@@ -107,7 +107,7 @@ struct prefetcher *custom_prefetcher_new()
     custom_prefetcher->cleanup = &custom_cleanup;
 
     // TODO allocate any additional memory needed to store metadata here and
-    // assign to adjacent_prefetcher->data.
+    // assign to custom_prefetcher->data.
 
     return custom_prefetcher;
 }
