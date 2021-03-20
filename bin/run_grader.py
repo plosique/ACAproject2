@@ -33,12 +33,11 @@ test_results = []
 def test_results_add(number, name, output, score, max_score=1):
     test_results.append(
         {
-            "name": name,
-            "score": score,
             "max_score": max_score,
-            "number": number,
             "name": name,
+            "number": number,
             "output": output,
+            "score": score,
         }
     )
 
@@ -102,13 +101,14 @@ for infile in sorted(inputs_dir.iterdir()):
         )
 
         # Calculate the test number and name
-        max_score = 1
         if prefetcher == "adjacent":
             test_number = f"1.1.{adjacent_i}"
             adjacent_i += 1
+            max_score = 3
         else:
             test_number = f"1.2.{sequential_i}"
             sequential_i += 1
+            max_score = 1
         test_name = expected_file_path.name
 
         output_lines = run_sim(["LRU", *map(str.upper, file_parts.groups())], infile)
@@ -172,7 +172,7 @@ test_results.sort(key=lambda x: tuple(int(n) for n in x["number"].split(".")))
 aggregated_scores = defaultdict(int)
 aggregated_max_scores = defaultdict(int)
 for tr in test_results:
-    rubric_item_key = tuple(tr["number"].split(".")[0])
+    rubric_item_key = tuple(tr["number"].split(".")[:2])
     aggregated_scores[rubric_item_key] += tr["score"]
     aggregated_max_scores[rubric_item_key] += tr["max_score"]
 
