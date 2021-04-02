@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 {
     // Parse the arguments.
     if (argc != 7) {
-        fprintf(stderr, "Incorrect number of arguments.");
+        fprintf(stderr, "Incorrect number of arguments.\n");
         return 1;
     }
     char *replacement_policy_str = argv[1];
