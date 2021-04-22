@@ -5,7 +5,7 @@
 
 #include "prefetchers.h"
 
-// Nul Prefetcher
+// Null Prefetcher
 // ============================================================================
 uint32_t null_handle_mem_access(struct prefetcher *prefetcher, struct cache_system *cache_system,
                                 uint32_t address, bool is_miss)
