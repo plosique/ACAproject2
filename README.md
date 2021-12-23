@@ -48,7 +48,7 @@ before submitting!
 
 ## Prefetcher Functionality
 
-All the requirements from [Project 1](https://git.sr.ht/~sumner/aca-project1)
+All the requirements from [Project 1](https://github.com/csci564/project1)
 still apply. However, after updating the replacement policy state, the
 prefetcher will be called. The prefetcher should prefetch cache lines according
 to the specified strategy (see below).
@@ -113,26 +113,26 @@ class include: hit rate, compulsory misses, conflict misses, and prefetches.
 ## Starter Code Overview
 
 See the [Project 1 Starter Code
-Overview](https://git.sr.ht/~sumner/aca-project1/#starter-code-overview).
+Overview](https://github.com/csci564/project1/#starter-code-overview).
 
 ### Downloading the Source
 
-If you want to use git on this project, **please use a *private* repo**. Then,
-run the following commands to clone the starter code and set the `origin` to
-your repo:
+If you want to use git on this project, **please use a *private* repo**. You can
+either fork this repo to a private repository on GitHub, or you can run the
+following commands to clone the starter code and set the `origin` to your repo:
 ```
-git clone https://git.sr.ht/~sumner/aca-project2
+git clone https://github.com/csci564/project2.git
 git remote set-url origin <your-private-repo-url>
 ```
 
 Alternatively, if you don't want to use Git, you can download a TAR.GZ of the
 source from the following URL:
-http://git.sr.ht/~sumner/aca-project2/archive/master.tar.gz
+https://github.com/csci564/project2/archive/refs/heads/master.tar.gz
 
 ## Full Requirements
 
 As with the starter code for [Project
-1](https://git.sr.ht/~sumner/aca-project1), the following requirements are
+1](https://github.com/csci564/project1), the following requirements are
 automatically fulfilled by the starter code (assuming correct usage). They are
 included so that if you choose to write your simulator without using the starter
 code, your submission will be able to be graded.
@@ -194,13 +194,7 @@ com`.
 ## Contributing
 
 Contributions to this project description or to the starter code are welcome!
-
-If you find an issue with the project description or to the starter code or want
-to suggest an improvement to it, please submit a patch via
-[git-send-email](https://git-send-email.io) to the
-[~sumner/public-inbox](https://lists.sr.ht/~sumner/public-inbox) mailing list or
-send the patch directly to me. You can also send an email to the mailing list to
-discuss potential changes.
+Just submit a PR or create an issue.
 
 ## Credits
 
