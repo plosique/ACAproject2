@@ -61,6 +61,9 @@ struct replacement_policy {
 
     // Use this pointer to store any data for the replacement policy.
     void *data;
+
+    //Use this to track the time of a accesses
+    uint32_t time; 
 };
 
 // Constructors for each of the replacement policies.

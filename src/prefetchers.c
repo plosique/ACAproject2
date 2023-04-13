@@ -59,16 +59,16 @@ uint32_t adjacent_handle_mem_access(struct prefetcher *prefetcher,
                                     struct cache_system *cache_system, uint32_t address,
                                     bool is_miss)
 {
-    // TODO perform the necessary prefetches for the adjacent strategy.
-
-    // TODO: Return the number of lines that were prefetched.
-    return 0;
+	if(is_miss){
+		cache_system_mem_access(cache_system,address+1,'w',true); 
+		return 1; 
+	}
+	return 0;
 }
 
 void adjacent_cleanup(struct prefetcher *prefetcher)
 {
-    // TODO cleanup any additional memory that you allocated in the
-    // adjacent_prefetcher_new function.
+	free(prefetcher->saved_addresses);  
 }
 
 struct prefetcher *adjacent_prefetcher_new()
@@ -76,9 +76,8 @@ struct prefetcher *adjacent_prefetcher_new()
     struct prefetcher *adjacent_prefetcher = calloc(1, sizeof(struct prefetcher));
     adjacent_prefetcher->handle_mem_access = &adjacent_handle_mem_access;
     adjacent_prefetcher->cleanup = &adjacent_cleanup;
+    adjacent_prefetcher->saved_addresses = (uint32_t*) malloc(1*sizeof(uint32_t)); 
 
-    // TODO allocate any additional memory needed to store metadata here and
-    // assign to adjacent_prefetcher->data.
 
     return adjacent_prefetcher;
 }
